@@ -1,0 +1,43 @@
+.section-analytics {
+  margin: 9.6rem 6rem;
+}
+
+.section-analytics .container {
+  background-color: var(--bg-color);
+  border-radius: 2rem;
+  padding: 2rem;
+}
+
+.section-analytics .grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-left: 16rem;
+  text-align: center;
+  color: var(--dark-color);
+}
+
+.section-analytics .div1 {
+  position: relative;
+  padding: 2rem;
+}
+
+.section-analytics .div1:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 20%;
+  right: 0;
+  height: 60%;
+  width: 1px;
+  background-color: var(--dark-color);
+  transform: translateX(50%);
+}
+
+.section-analytics .div1 h2 {
+  font-size: 4.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.section-analytics .div1 p {
+  text-transform: capitalize;
+  font-size: 1.6rem;
+}
