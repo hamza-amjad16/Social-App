@@ -14,13 +14,16 @@ import { errorMiddleware } from "./middleware/error-middleware.js"
 
 const app = express()
 
-const corsoptions = {
-    origin: "http://localhost:5173",
-    methods : "GET , POST , DELETE , PUT , PATCH , HEAD",
-    credentials : true,
-}
-
-app.use(cors(corsoptions))
+const corsOptions = {
+    origin: [
+      "http://localhost:5173",
+      "https://social-app-seven-red.vercel.app"
+    ],
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "HEAD"],
+    credentials: true,
+  };
+  
+  app.use(cors(corsOptions));
 
 app.use(express.json())
 app.use('/images', express.static('public/images'));
