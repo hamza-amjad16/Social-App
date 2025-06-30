@@ -38,7 +38,7 @@ const PORT = 5000
 connectDB()
 .then(() => {
     app.listen(PORT || "/" , () => {
-        console.log(`server is running at PORT: ${PORT}`);
+      res.send(`server is running at PORT: ${PORT}`);
         
     })
 })
