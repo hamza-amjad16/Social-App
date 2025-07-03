@@ -23,7 +23,7 @@ const corsOptions = {
     credentials: true,
   };
   
-  app.use(cors(corsOptions));
+  app.use('*', cors(corsOptions));
 
 app.use(express.json())
 app.use('/images', express.static('public/images'));
