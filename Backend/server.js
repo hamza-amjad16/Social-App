@@ -16,7 +16,7 @@ const app = express()
 
 const corsOptions = {
     origin: [
-      "http://localhost:5173",
+      "https://social-app-production-434d.up.railway.app",
       "https://social-app-seven-red.vercel.app"
     ],
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "HEAD"],
