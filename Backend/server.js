@@ -33,11 +33,11 @@ app.use("/api/data" , serviceRouter)
 app.use("/api/admin" , adminRouter)
 app.use(errorMiddleware)
 
-const PORT = 5000
+const PORT = process.env.PORT || 3000
 
 connectDB()
 .then(() => {
-    app.listen(PORT || "/" , () => {
+    app.listen(PORT , () => {
       res.send(`server is running at PORT: ${PORT}`);
         
     })
